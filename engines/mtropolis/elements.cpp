@@ -1534,12 +1534,13 @@ MiniscriptInstructionOutcome MToonElement::scriptSetCel(MiniscriptThread *thread
 }
 
 MiniscriptInstructionOutcome MToonElement::scriptSetRange(MiniscriptThread *thread, const DynamicValue &value) {
-	if (value.getType() != DynamicValueTypes::kIntegerRange) {
-		thread->error("Invalid type for mToon range");
-		return kMiniscriptInstructionOutcomeFailed;
-	}
+	if (value.getType() == DynamicValueTypes::kIntegerRange)
+		return scriptSetRangeTyped(thread, value.getIntRange());
+	if (value.getType() == DynamicValueTypes::kPoint)
+		return scriptSetRangeTyped(thread, value.getPoint());
 
-	return scriptSetRangeTyped(thread, value.getIntRange());
+	thread->error("Invalid type for mToon range");
+	return kMiniscriptInstructionOutcomeFailed;
 }
 
 MiniscriptInstructionOutcome MToonElement::scriptSetRangeStart(MiniscriptThread *thread, const DynamicValue &value) {
@@ -1576,6 +1577,11 @@ MiniscriptInstructionOutcome MToonElement::scriptRangeWriteRefAttribute(Miniscri
 	}
 
 	return kMiniscriptInstructionOutcomeFailed;
+}
+
+MiniscriptInstructionOutcome MToonElement::scriptSetRangeTyped(MiniscriptThread *thread, const Common::Point &pointRef) {
+	IntRange intRange(pointRef.x, pointRef.y);
+	return scriptSetRangeTyped(thread, intRange);
 }
 
 MiniscriptInstructionOutcome MToonElement::scriptSetRangeTyped(MiniscriptThread *thread, const IntRange &intRangeRef) {
