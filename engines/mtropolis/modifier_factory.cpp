@@ -83,6 +83,8 @@ SIModifierFactory *getModifierFactoryForDataObjectType(const Data::DataObjectTyp
 		return ModifierFactory<AliasModifier, Data::AliasModifier>::getInstance();
 	case Data::DataObjectTypes::kChangeSceneModifier:
 		return ModifierFactory<ChangeSceneModifier, Data::ChangeSceneModifier>::getInstance();
+	case Data::DataObjectTypes::kReturnModifier:
+		return ModifierFactory<ReturnModifier, Data::ReturnModifier>::getInstance();
 	case Data::DataObjectTypes::kSoundEffectModifier:
 		return ModifierFactory<SoundEffectModifier, Data::SoundEffectModifier>::getInstance();
 	case Data::DataObjectTypes::kPathMotionModifierV1:
@@ -136,6 +138,8 @@ SIModifierFactory *getModifierFactoryForDataObjectType(const Data::DataObjectTyp
 		return ModifierFactory<StringVariableModifier, Data::StringVariableModifier>::getInstance();
 	case Data::DataObjectTypes::kObjectReferenceVariableModifierV1:
 		return ModifierFactory<ObjectReferenceVariableModifierV1, Data::ObjectReferenceVariableModifierV1>::getInstance();
+	case Data::DataObjectTypes::kCursorModifierV1:
+		return ModifierFactory<CursorModifierV1, Data::CursorModifierV1>::getInstance();
 
 	default:
 		warning("No modifier factory for type %x", static_cast<int>(dataObjectType));

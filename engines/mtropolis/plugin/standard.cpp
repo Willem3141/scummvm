@@ -2131,6 +2131,8 @@ void ObjectReferenceVariableModifier::resolveRelativePath(RuntimeObject *obj, co
 	bool haveNextLevel = true;
 	size_t nextLevelPos = startPos;
 
+	debug(9, "resolving relative path %s", path.c_str());
+
 	while (haveNextLevel) {
 		startPos = nextLevelPos;
 		size_t endPos = path.find('/', startPos);
@@ -2142,13 +2144,17 @@ void ObjectReferenceVariableModifier::resolveRelativePath(RuntimeObject *obj, co
 		}
 
 		Common::String levelName = path.substr(startPos, endPos - startPos);
+		debug(9, "    found level %s", levelName.c_str());
 
 		// This is technically more forgiving than mTropolis, which only allows ".." chains at the start of the path
 		// Adjust this if it turns out to be a problem...
 		if (levelName == "..") {
 			obj = getObjectParent(obj);
-			if (obj == nullptr)
+			if (obj == nullptr) {
+				debug(9, "        is nullptr");
 				return;
+			}
+			continue;
 		}
 
 		const Common::Array<Common::SharedPtr<Modifier> > *modifierChildren = nullptr;
@@ -2185,8 +2191,10 @@ void ObjectReferenceVariableModifier::resolveRelativePath(RuntimeObject *obj, co
 			}
 		}
 
-		if (!foundMatch)
+		if (!foundMatch) {
+			debug(9, "        !foundMatch");
 			return;
+		}
 	}
 
 	_object.object = obj->getSelfReference();

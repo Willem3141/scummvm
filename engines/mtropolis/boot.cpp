@@ -35,6 +35,7 @@
 
 #include "mtropolis/plugin/mti.h"
 #include "mtropolis/plugin/obsidian.h"
+#include "mtropolis/plugin/spqr.h"
 #include "mtropolis/plugin/standard.h"
 #include "mtropolis/plugins.h"
 
@@ -396,6 +397,25 @@ void MTIGameDataHandler::addPlugIns(ProjectDescription &projectDesc, const Commo
 	projectDesc.addPlugIn(standardPlugIn);
 }
 
+class SPQRGameDataHandler : public GameDataHandler {
+public:
+	SPQRGameDataHandler(const Game &game, const MTropolisGameDescription &gameDesc);
+
+	void addPlugIns(ProjectDescription &projectDesc, const Common::Array<FileIdentification> &files) override;
+};
+
+SPQRGameDataHandler::SPQRGameDataHandler(const Game &game, const MTropolisGameDescription &gameDesc) : GameDataHandler(game, gameDesc) {
+}
+
+void SPQRGameDataHandler::addPlugIns(ProjectDescription &projectDesc, const Common::Array<FileIdentification> &files) {
+	Common::SharedPtr<MTropolis::PlugIn> spqrPlugIn(new SPQR::SPQRPlugIn());
+	projectDesc.addPlugIn(spqrPlugIn);
+
+	Common::SharedPtr<MTropolis::PlugIn> standardPlugIn = PlugIns::createStandard();
+	static_cast<Standard::StandardPlugIn *>(standardPlugIn.get())->getHacks().allowGarbledListModData = true;
+	projectDesc.addPlugIn(standardPlugIn);
+}
+
 static bool getMacTypesForMacBinary(const char *fileName, uint32 &outType, uint32 &outCreator) {
 	Common::SharedPtr<Common::SeekableReadStream> stream(SearchMan.createReadStreamForMember(fileName));
 
@@ -488,6 +508,9 @@ static int resolveFileSegmentID(const Common::String &fileName) {
 	if (numDigits == 0)
 		error("Unusual segment naming scheme");
 
+	if (numDigits > 2)
+		return 2;
+
 	return segmentID;
 }
 
@@ -550,8 +573,12 @@ static bool loadCursorsWin(FileIdentification &f, CursorGraphicCollection &curso
 
 	if (!stream) {
 		Common::SharedPtr<Common::File> file(new Common::File());
-		if (!file->open(f.fileName))
+		debug("hoi hoi test '%s'\n", f.fileName.c_str());
+		if (!file->open(f.fileName)) {
+			debug("hoi hoi test 2\n");
 			error("Failed to open file '%s'", f.fileName.c_str());
+		}
+		debug("hoi hoi test 3\n");
 
 		stream = file;
 	}
@@ -779,6 +806,24 @@ const char *mtiRetailWinDirectories[] = {
 	nullptr
 };
 
+const ManifestFile spqrWinFiles[] = {
+	{"SPQR32.EXE", MTFT_PLAYER},
+	{"SPQR.MPL", MTFT_MAIN},
+	{"S_6842.MPX", MTFT_ADDITIONAL},
+	{"BASIC.X95", MTFT_EXTENSION},
+	{"EXTRAS.R95", MTFT_EXTENSION},
+	{"EXPRMNTL.R95", MTFT_EXTENSION},
+	{"MCURSORS.C95", MTFT_EXTENSION},
+	{nullptr, MTFT_AUTO}
+};
+
+const char *spqrWinDirectories[] = {
+	"GAME",
+	"GAME/RESOURCE",
+	"RESOURCE",
+	nullptr
+};
+
 const Game games[] = {
 	// Obsidian - Retail - Macintosh - English
 	{
@@ -891,6 +936,14 @@ const Game games[] = {
 		nullptr,
 		nullptr,
 		GameDataHandlerFactory<MTIGameDataHandler>::create
+	},
+	// S.P.Q.R. - Retail - Windows - English
+	{
+		MTBOOT_SPQR_WIN_EN,
+		spqrWinFiles,
+		spqrWinDirectories,
+		nullptr,
+		GameDataHandlerFactory<SPQRGameDataHandler>::create
 	},
 };
 
@@ -1247,6 +1300,8 @@ Common::SharedPtr<ProjectDescription> bootProject(const MTropolisGameDescription
 			segmentFiles[0] = mainSegmentFile;
 		else
 			segmentFiles.push_back(mainSegmentFile);
+
+		debug("segmentFiles size %d", segmentFiles.size());
 
 		// Load cursors
 		Common::SharedPtr<CursorGraphicCollection> cursorGraphics(new CursorGraphicCollection());

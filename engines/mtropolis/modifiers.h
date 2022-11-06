@@ -310,6 +310,27 @@ private:
 	bool _wrapAround;
 };
 
+class ReturnModifier : public Modifier {
+public:
+	bool load(ModifierLoaderContext &context, const Data::ReturnModifier &data);
+
+	bool respondsToEvent(const Event &evt) const override;
+	VThreadState consumeMessage(Runtime *runtime, const Common::SharedPtr<MessageProperties> &msg) override;
+
+	void disable(Runtime *runtime) override {}
+
+#ifdef MTROPOLIS_DEBUG_ENABLE
+	const char *debugGetTypeName() const override { return "Return Modifier"; }
+	SupportStatus debugGetSupportStatus() const override { return kSupportStatusNone; }
+#endif
+
+private:
+	Common::SharedPtr<Modifier> shallowClone() const override;
+	const char *getDefaultName() const override;
+
+	uint8 _unknown1[10];
+};
+
 class SoundEffectModifier : public Modifier {
 public:
 	SoundEffectModifier();
@@ -1229,6 +1250,35 @@ private:
 
 	Common::WeakPtr<RuntimeObject> _value;
 	Event _setToSourcesParentWhen;
+};
+
+class CursorModifierV1 : public Modifier {
+public:
+	bool load(ModifierLoaderContext &context, const Data::CursorModifierV1 &data);
+
+	bool respondsToEvent(const Event &evt) const override;
+	VThreadState consumeMessage(Runtime *runtime, const Common::SharedPtr<MessageProperties> &msg) override;
+
+	void disable(Runtime *runtime) override {}
+
+#ifdef MTROPOLIS_DEBUG_ENABLE
+	const char *debugGetTypeName() const override { return "Cursor Modifier V1"; }
+	SupportStatus debugGetSupportStatus() const override { return kSupportStatusNone; }
+#endif
+
+private:
+	Common::SharedPtr<Modifier> shallowClone() const override;
+	const char *getDefaultName() const override;
+
+	uint32 _unknown1;
+	uint32 _size;
+	uint32 _unknown3;
+	uint32 _unknown4;
+	uint16 _unknown5;
+	uint32 _unknown6;
+	uint8 _unknown7[4];
+	uint16 _lengthOfName;
+	Common::String _name;
 };
 
 }	// End of namespace MTropolis

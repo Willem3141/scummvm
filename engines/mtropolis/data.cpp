@@ -22,6 +22,7 @@
 #include "common/debug.h"
 #include "common/memstream.h"
 
+#include "data.h"
 #include "mtropolis/data.h"
 
 namespace MTropolis {
@@ -1345,6 +1346,20 @@ DataReadErrorCode ChangeSceneModifier::load(DataReader &reader) {
 	return kDataReadErrorNone;
 }
 
+ReturnModifier::ReturnModifier()
+	: unknown1{} {
+}
+
+DataReadErrorCode ReturnModifier::load(DataReader &reader) {
+	if (_revision != 1001)
+		return kDataReadErrorUnsupportedRevision;
+
+	if (!modHeader.load(reader) || !reader.readBytes(unknown1))
+		return kDataReadErrorReadFailed;
+
+	return kDataReadErrorNone;
+}
+
 SoundEffectModifier::SoundEffectModifier()
 	: unknown1{0, 0, 0, 0}, unknown2(0), unknown3{0, 0, 0, 0}, assetID(0), unknown5{0, 0, 0, 0} {
 }
@@ -1846,6 +1861,29 @@ DataReadErrorCode ObjectReferenceVariableModifierV1::load(DataReader &reader) {
 		return kDataReadErrorUnsupportedRevision;
 
 	if (!modHeader.load(reader) || !reader.readU32(unknown1) || !setToSourcesParentWhen.load(reader))
+		return kDataReadErrorReadFailed;
+
+	return kDataReadErrorNone;
+}
+
+CursorModifierV1::CursorModifierV1()
+	: unknown1(0), size(0), unknown3(0), unknown4(0), unknown5(0), unknown6(0),
+	unknown7{}, lengthOfName(0), name{} {
+}
+
+DataReadErrorCode CursorModifierV1::load(DataReader &reader) {
+	if (_revision != 1001)
+		return kDataReadErrorUnsupportedRevision;
+
+	if (!reader.readU32(unknown1) ||
+		!reader.readU32(size) ||
+		!reader.readU32(unknown3) ||
+		!reader.readU32(unknown4) ||
+		!reader.readU16(unknown5) ||
+		!reader.readU32(unknown6) ||
+		!reader.readBytes(unknown7) ||
+		!reader.readU16(lengthOfName) ||
+		!reader.readTerminatedStr(name, lengthOfName))
 		return kDataReadErrorReadFailed;
 
 	return kDataReadErrorNone;
@@ -2403,6 +2441,9 @@ DataReadErrorCode loadDataObject(const PlugInModifierRegistry &registry, DataRea
 	case DataObjectTypes::kChangeSceneModifier:
 		dataObject = new ChangeSceneModifier();
 		break;
+	case DataObjectTypes::kReturnModifier:
+		dataObject = new ReturnModifier();
+		break;
 	case DataObjectTypes::kSoundEffectModifier:
 		dataObject = new SoundEffectModifier();
 		break;
@@ -2456,6 +2497,9 @@ DataReadErrorCode loadDataObject(const PlugInModifierRegistry &registry, DataRea
 		break;
 	case DataObjectTypes::kObjectReferenceVariableModifierV1:
 		dataObject = new ObjectReferenceVariableModifierV1();
+		break;
+	case DataObjectTypes::kCursorModifierV1:
+		dataObject = new CursorModifierV1();
 		break;
 	case DataObjectTypes::kDebris:
 		dataObject = new Debris();

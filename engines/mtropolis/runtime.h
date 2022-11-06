@@ -2006,6 +2006,8 @@ private:
 	MiniscriptInstructionOutcome setRefreshCursor(MiniscriptThread *thread, const DynamicValue &value);
 	MiniscriptInstructionOutcome setAutoResetCursor(MiniscriptThread *thread, const DynamicValue &value);
 	MiniscriptInstructionOutcome setWinSndBufferSize(MiniscriptThread *thread, const DynamicValue &value);
+	MiniscriptInstructionOutcome setOpInt(MiniscriptThread *thread, const DynamicValue &value);
+	MiniscriptInstructionOutcome setPostponeRedraws(MiniscriptThread *thread, const DynamicValue &value);
 
 	bool _gameMode;
 };

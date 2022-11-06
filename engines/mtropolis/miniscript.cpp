@@ -496,6 +496,17 @@ MiniscriptInstructionOutcome Set::execute(MiniscriptThread *thread) const {
 
 	if (target.value.getType() == DynamicValueTypes::kWriteProxy) {
 		const DynamicValueWriteProxy &proxy = target.value.getWriteProxy();
+		if (srcValue.value.getType() == DynamicValueTypes::DynamicValueType::kNull) {
+			debug(9, "writing to write proxy srcValue: null");
+		} else if (srcValue.value.getType() == DynamicValueTypes::DynamicValueType::kInteger) {
+			debug(9, "writing to write proxy srcValue: integer '%d'", srcValue.value.getInt());
+		} else if (srcValue.value.getType() == DynamicValueTypes::DynamicValueType::kFloat) {
+			debug(9, "writing to write proxy srcValue: float '%f'", srcValue.value.getFloat());
+		} else if (srcValue.value.getType() == DynamicValueTypes::DynamicValueType::kString) {
+			debug(9, "writing to write proxy srcValue: string '%s'", srcValue.value.getString().c_str());
+		} else {
+			debug(9, "writing to write proxy srcValue of type %d", srcValue.value.getType());
+		}
 		outcome = proxy.pod.ifc->write(thread, srcValue.value, proxy.pod.objectRef, proxy.pod.ptrOrOffset);
 		if (outcome == kMiniscriptInstructionOutcomeFailed) {
 			thread->error("Failed to assign value to proxy");
@@ -2008,7 +2019,7 @@ VThreadState MiniscriptThread::resume(const ResumeTaskData &taskData) {
 	while (_currentInstruction < numInstrs && !_failed) {
 		size_t instrNum = _currentInstruction++;
 		MiniscriptInstruction *instr = instrs[instrNum];
-
+		debug(10, "executing miniscript instruction %ld", instrNum);
 		MiniscriptInstructionOutcome outcome = instr->execute(this);
 		if (outcome == kMiniscriptInstructionOutcomeFailed) {
 			// Should this also interrupt the message dispatch?

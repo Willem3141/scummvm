@@ -1107,6 +1107,16 @@ protected:
 	DataReadErrorCode load(DataReader &reader) override;
 };
 
+struct ReturnModifier : public DataObject {
+	ReturnModifier();
+
+	TypicalModifierHeader modHeader;
+	uint8 unknown1[10];
+
+protected:
+	DataReadErrorCode load(DataReader &reader) override;
+};
+
 struct SoundEffectModifier : public DataObject {
 	SoundEffectModifier();
 
@@ -1698,6 +1708,23 @@ struct ObjectReferenceVariableModifierV1 : public DataObject {
 	TypicalModifierHeader modHeader;
 	uint32 unknown1;
 	Event setToSourcesParentWhen;
+
+protected:
+	DataReadErrorCode load(DataReader &reader) override;
+};
+
+struct CursorModifierV1 : public DataObject {
+	CursorModifierV1();
+
+	uint32 unknown1;
+	uint32 size;
+	uint32 unknown3;
+	uint32 unknown4;
+	uint16 unknown5;
+	uint32 unknown6;
+	uint8 unknown7[4];
+	uint16 lengthOfName;
+	Common::String name;
 
 protected:
 	DataReadErrorCode load(DataReader &reader) override;

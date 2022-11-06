@@ -2589,9 +2589,17 @@ MiniscriptInstructionOutcome WorldManagerInterface::writeRefAttribute(Miniscript
 		DynamicValueWriteFuncHelper<WorldManagerInterface, &WorldManagerInterface::setWinSndBufferSize>::create(this, result);
 		return kMiniscriptInstructionOutcomeContinue;
 	}
+	if (attrib == "opint") {
+		warning("Tried writing to worldmanager.opint; this is not supported yet");
+		DynamicValueWriteFuncHelper<WorldManagerInterface, &WorldManagerInterface::setOpInt>::create(this, result);
+		return kMiniscriptInstructionOutcomeContinue;
+	}
+	if (attrib == "postponeredraws") {
+		DynamicValueWriteFuncHelper<WorldManagerInterface, &WorldManagerInterface::setPostponeRedraws>::create(this, result);
+		return kMiniscriptInstructionOutcomeContinue;
+	}
 	if (attrib == "gamemode") {
 		DynamicValueWriteBoolHelper::create(&_gameMode, result);
-		return kMiniscriptInstructionOutcomeContinue;
 	}
 	return RuntimeObject::writeRefAttribute(thread, result, attrib);
 }
@@ -2643,6 +2651,16 @@ MiniscriptInstructionOutcome WorldManagerInterface::setAutoResetCursor(Miniscrip
 }
 
 MiniscriptInstructionOutcome WorldManagerInterface::setWinSndBufferSize(MiniscriptThread *thread, const DynamicValue &value) {
+	// Ignore
+	return kMiniscriptInstructionOutcomeContinue;
+}
+
+MiniscriptInstructionOutcome WorldManagerInterface::setOpInt(MiniscriptThread *thread, const DynamicValue &value) {
+	// Ignore... for now
+	return kMiniscriptInstructionOutcomeContinue;
+}
+
+MiniscriptInstructionOutcome WorldManagerInterface::setPostponeRedraws(MiniscriptThread *thread, const DynamicValue &value) {
 	// Ignore
 	return kMiniscriptInstructionOutcomeContinue;
 }

@@ -699,6 +699,34 @@ const char *ChangeSceneModifier::getDefaultName() const {
 	return "Change Scene Modifier";
 }
 
+bool ReturnModifier::load(ModifierLoaderContext& context, const Data::ReturnModifier& data) {
+	if (!loadTypicalHeader(data.modHeader))
+		return false;
+
+	// TODO implement?
+
+	return true;
+}
+
+bool ReturnModifier::respondsToEvent(const Event &evt) const {
+	// TODO
+	return false;
+}
+
+VThreadState ReturnModifier::consumeMessage(Runtime *runtime, const Common::SharedPtr<MessageProperties>& msg) {
+	warning("Return Modifier not implemented");
+
+	return kVThreadReturn;
+}
+
+Common::SharedPtr<Modifier> ReturnModifier::shallowClone() const {
+	return Common::SharedPtr<Modifier>(new ReturnModifier(*this));
+}
+
+const char *ReturnModifier::getDefaultName() const {
+	return "Return Modifier";
+}
+
 SoundEffectModifier::SoundEffectModifier() : _soundType(kSoundTypeBeep), _assetID(0) {
 }
 
@@ -2968,6 +2996,34 @@ void ObjectReferenceVariableModifierV1::SaveLoad::saveInternal(Common::WriteStre
 
 bool ObjectReferenceVariableModifierV1::SaveLoad::loadInternal(Common::ReadStream *stream, uint32 saveFileVersion) {
 	return true;
+}
+
+bool CursorModifierV1::load(ModifierLoaderContext& context, const Data::CursorModifierV1& data) {
+	if (!_modifierFlags.load(data.unknown1))  // ?????
+		return false;
+
+	// TODO implement?
+
+	return true;
+}
+
+bool CursorModifierV1::respondsToEvent(const Event &evt) const {
+	// TODO
+	return false;
+}
+
+VThreadState CursorModifierV1::consumeMessage(Runtime *runtime, const Common::SharedPtr<MessageProperties>& msg) {
+	warning("Cursor Modifier V1 not implemented");
+
+	return kVThreadReturn;
+}
+
+Common::SharedPtr<Modifier> CursorModifierV1::shallowClone() const {
+	return Common::SharedPtr<Modifier>(new CursorModifierV1(*this));
+}
+
+const char *CursorModifierV1::getDefaultName() const {
+	return "Cursor Modifier V1";
 }
 
 } // End of namespace MTropolis

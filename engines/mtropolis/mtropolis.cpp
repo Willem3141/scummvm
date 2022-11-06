@@ -137,6 +137,13 @@ Common::Error MTropolisEngine::run() {
 			HackSuites::addObsidianImprovedWidescreen(*_gameDescription, _runtime->getHacks());
 		}
 	}
+	
+	if (_gameDescription->gameID == GID_SPQR) {
+		preferredWidth = 640;
+		preferredHeight = 480;
+		preferredColorDepthMode = kColorDepthMode16Bit;
+		enhancedColorDepthMode = kColorDepthMode32Bit;
+	}
 
 	if (_gameDescription->gameID == GID_MTI) {
 		preferredWidth = 640;
