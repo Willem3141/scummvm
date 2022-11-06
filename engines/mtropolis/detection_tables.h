@@ -449,13 +449,14 @@ static const MTropolisGameDescription gameDescriptions[] = {
 		MTBOOT_MTI_DEMO_WIN,
 	},
 
-	{ // S.P.Q.R. The Empire's Darkest Hour
+	{ // SPQR: The Empire's Darkest Hour Windows CD-ROM
 		{
 			"spqr",
-			"CD",
+			"",
 			{
 				{ "SPQR.MPL", 0, "da778ae00dd3e7596ba970a4dccd0a44", 3292503 },
 				{ "S_6842.MPX", 0, "506c04751bee9482f76333b0cf3c0e52", 577095784 },
+				{ "SPQR32.EXE", 0, "af2a7889779243c0d25392598e893137", 759296 },
 				AD_LISTEND
 			},
 			Common::EN_ANY,
@@ -465,7 +466,26 @@ static const MTropolisGameDescription gameDescriptions[] = {
 		},
 		GID_SPQR,
 		0,
-		MTBOOT_SPQR_WIN_EN,
+		MTBOOT_SPQR_RETAIL_WIN,
+	},
+
+	{ // SPQR: The Empire's Darkest Hour Macintosh CD-ROM
+		{
+			"spqr",
+			"",
+			{
+				{ "Install.vct", 0, "df8b7e964bf2ce4d32a38091836bdd75", 3539712 },
+				{ "S_6772", 0, "8f8e503fd5b6d0f7651149ff8d92a7a2", 576188928 },
+				AD_LISTEND
+			},
+			Common::EN_ANY,
+			Common::kPlatformMacintosh,
+			ADGF_UNSTABLE,
+			GUIO0()
+		},
+		GID_SPQR,
+		0,
+		MTBOOT_SPQR_RETAIL_MAC,
 	},
 
 	{ AD_TABLE_END_MARKER, 0, 0, MTBOOT_INVALID }

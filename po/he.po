@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ScummVM 2.1.0git\n"
 "Report-Msgid-Bugs-To: scummvm-devel@lists.scummvm.org\n"
-"POT-Creation-Date: 2022-10-25 21:05+0000\n"
-"PO-Revision-Date: 2022-10-21 01:33+0000\n"
+"POT-Creation-Date: 2022-11-06 19:03+0000\n"
+"PO-Revision-Date: 2022-10-27 02:33+0000\n"
 "Last-Translator: Niv Baehr <bloop93@gmail.com>\n"
 "Language-Team: Hebrew <https://translations.scummvm.org/projects/scummvm/"
 "scummvm/he/>\n"
@@ -58,7 +58,7 @@ msgid "Go up"
 msgstr "למעלה"
 
 #: gui/browser.cpp:81 gui/chooser.cpp:45 gui/downloadiconsdialog.cpp:257
-#: gui/downloadiconsdialog.cpp:452 gui/editgamedialog.cpp:367
+#: gui/downloadiconsdialog.cpp:452 gui/editgamedialog.cpp:358
 #: gui/editrecorddialog.cpp:66 gui/filebrowser-dialog.cpp:68
 #: gui/fluidsynth-dialog.cpp:152 gui/massadd.cpp:93 gui/options.cpp:2245
 #: gui/predictivedialog.cpp:68 gui/recorderdialog.cpp:73
@@ -96,7 +96,7 @@ msgstr "בחירה"
 msgid "Select directory where to download game data"
 msgstr "בחירת תיקיה להורדת נתוני משחק"
 
-#: gui/downloaddialog.cpp:49 gui/editgamedialog.cpp:558 gui/launcher.cpp:279
+#: gui/downloaddialog.cpp:49 gui/editgamedialog.cpp:549 gui/launcher.cpp:279
 msgid "Select directory with game data"
 msgstr "בחירת תיקיה עם נתוני משחק"
 
@@ -164,7 +164,7 @@ msgid ""
 "with the same name."
 msgstr "לא ניתן ליצור תיקיה להורדה - קובץ באותו שם כבר קיים בתיקיה שנבחרה."
 
-#: gui/downloaddialog.cpp:146 gui/editgamedialog.cpp:368
+#: gui/downloaddialog.cpp:146 gui/editgamedialog.cpp:359
 #: gui/editrecorddialog.cpp:67 gui/fluidsynth-dialog.cpp:153
 #: gui/launcher.cpp:534 gui/launcher.cpp:538 gui/massadd.cpp:90
 #: gui/options.cpp:2247 gui/predictivedialog.cpp:69
@@ -267,53 +267,53 @@ msgstr ""
 msgid "Proceed"
 msgstr "המשך"
 
-#: gui/editgamedialog.cpp:140 engines/dialogs.cpp:277
+#: gui/editgamedialog.cpp:131 engines/dialogs.cpp:277
 msgid "Game"
 msgstr "משחק"
 
-#: gui/editgamedialog.cpp:144
+#: gui/editgamedialog.cpp:135
 msgid "ID:"
 msgstr "מזהה:"
 
-#: gui/editgamedialog.cpp:144 gui/editgamedialog.cpp:146
-#: gui/editgamedialog.cpp:147
+#: gui/editgamedialog.cpp:135 gui/editgamedialog.cpp:137
+#: gui/editgamedialog.cpp:138
 msgid ""
 "Short game identifier used for referring to saved games and running the game "
 "from the command line"
 msgstr ""
 "תיאור קצר של המשחק המשמש להפניה למשחקים שמורים ולהרצת המשחק משורת הפקודה"
 
-#: gui/editgamedialog.cpp:146
+#: gui/editgamedialog.cpp:137
 msgctxt "lowres"
 msgid "ID:"
 msgstr "מזהה:"
 
-#: gui/editgamedialog.cpp:151 gui/editrecorddialog.cpp:58
+#: gui/editgamedialog.cpp:142 gui/editrecorddialog.cpp:58
 msgid "Name:"
 msgstr "שם:"
 
-#: gui/editgamedialog.cpp:151 gui/editgamedialog.cpp:153
-#: gui/editgamedialog.cpp:154
+#: gui/editgamedialog.cpp:142 gui/editgamedialog.cpp:144
+#: gui/editgamedialog.cpp:145
 msgid "Full title of the game"
 msgstr "כותרת מלאה של המשחק"
 
-#: gui/editgamedialog.cpp:153
+#: gui/editgamedialog.cpp:144
 msgctxt "lowres"
 msgid "Name:"
 msgstr "שם:"
 
-#: gui/editgamedialog.cpp:160 engines/mohawk/dialogs.cpp:159
+#: gui/editgamedialog.cpp:151 engines/mohawk/dialogs.cpp:159
 #: engines/mohawk/dialogs.cpp:378
 msgid "Language:"
 msgstr "שפה:"
 
-#: gui/editgamedialog.cpp:160 gui/editgamedialog.cpp:161
+#: gui/editgamedialog.cpp:151 gui/editgamedialog.cpp:152
 msgid ""
 "Language of the game. This will not turn your Spanish game version into "
 "English"
 msgstr "שפת המשחק. אפשרות זו לא תהפוך משחק בטורקית למשחק בעברית"
 
-#: gui/editgamedialog.cpp:162 gui/editgamedialog.cpp:177 gui/options.cpp:1498
+#: gui/editgamedialog.cpp:153 gui/editgamedialog.cpp:168 gui/options.cpp:1498
 #: gui/options.cpp:1513 gui/options.cpp:1529 gui/options.cpp:1541
 #: gui/options.cpp:1571 gui/options.cpp:1585 gui/options.cpp:1990
 #: gui/options.cpp:2390 gui/options.cpp:2464 gui/options.cpp:2644
@@ -323,168 +323,168 @@ msgstr "שפת המשחק. אפשרות זו לא תהפוך משחק בטורק
 msgid "<default>"
 msgstr "<ברירת מחדל>"
 
-#: gui/editgamedialog.cpp:173
+#: gui/editgamedialog.cpp:164
 msgid "Platform:"
 msgstr "פלטפורמה:"
 
-#: gui/editgamedialog.cpp:173 gui/editgamedialog.cpp:175
-#: gui/editgamedialog.cpp:176
+#: gui/editgamedialog.cpp:164 gui/editgamedialog.cpp:166
+#: gui/editgamedialog.cpp:167
 msgid "Platform the game was originally designed for"
 msgstr "הפלטפורמה עבורה תכננו את המשחק במקור"
 
-#: gui/editgamedialog.cpp:175
+#: gui/editgamedialog.cpp:166
 msgctxt "lowres"
 msgid "Platform:"
 msgstr "פלטפורמה:"
 
-#: gui/editgamedialog.cpp:206 gui/options.cpp:1920 gui/options.cpp:2102
+#: gui/editgamedialog.cpp:197 gui/options.cpp:1920 gui/options.cpp:2102
 #: backends/graphics/sdl/sdl-graphics.cpp:423
 msgid "Graphics"
 msgstr "תצוגה"
 
-#: gui/editgamedialog.cpp:206 gui/options.cpp:1920 gui/options.cpp:2102
+#: gui/editgamedialog.cpp:197 gui/options.cpp:1920 gui/options.cpp:2102
 msgid "GFX"
 msgstr "תצוגה"
 
-#: gui/editgamedialog.cpp:212
+#: gui/editgamedialog.cpp:203
 msgid "Override global graphic settings"
 msgstr "ביטול הגדרות תצוגה מקיפות"
 
-#: gui/editgamedialog.cpp:214
+#: gui/editgamedialog.cpp:205
 msgctxt "lowres"
 msgid "Override global graphic settings"
 msgstr "ביטול הגדרות תצוגה מקיפות"
 
-#: gui/editgamedialog.cpp:227 gui/options.cpp:2136 engines/dialogs.cpp:320
+#: gui/editgamedialog.cpp:218 gui/options.cpp:2136 engines/dialogs.cpp:320
 msgid "Keymaps"
 msgstr "מיפוי מקשים"
 
-#: gui/editgamedialog.cpp:234 gui/options.cpp:2143 engines/dialogs.cpp:327
+#: gui/editgamedialog.cpp:225 gui/options.cpp:2143 engines/dialogs.cpp:327
 msgid "Backend"
 msgstr "תשתית"
 
-#: gui/editgamedialog.cpp:237
+#: gui/editgamedialog.cpp:228
 msgid "Override global backend settings"
 msgstr "ביטול הגדרות תשתית מקיפות"
 
-#: gui/editgamedialog.cpp:239
+#: gui/editgamedialog.cpp:230
 msgctxt "lowres"
 msgid "Override global backend settings"
 msgstr "ביטול הגדרות תשתית מקיפות"
 
-#: gui/editgamedialog.cpp:253 gui/options.cpp:2157 engines/dialogs.cpp:295
+#: gui/editgamedialog.cpp:244 gui/options.cpp:2157 engines/dialogs.cpp:295
 msgid "Audio"
 msgstr "שמע"
 
-#: gui/editgamedialog.cpp:256
+#: gui/editgamedialog.cpp:247
 msgid "Override global audio settings"
 msgstr "ביטול הגדרות שמע מקיפות"
 
-#: gui/editgamedialog.cpp:258
+#: gui/editgamedialog.cpp:249
 msgctxt "lowres"
 msgid "Override global audio settings"
 msgstr "ביטול הגדרות שמע מקיפות"
 
-#: gui/editgamedialog.cpp:267 gui/options.cpp:2162
+#: gui/editgamedialog.cpp:258 gui/options.cpp:2162
 msgid "Volume"
 msgstr "עוצמה"
 
-#: gui/editgamedialog.cpp:269 gui/options.cpp:2164
+#: gui/editgamedialog.cpp:260 gui/options.cpp:2164
 msgctxt "lowres"
 msgid "Volume"
 msgstr "עוצמה"
 
-#: gui/editgamedialog.cpp:272
+#: gui/editgamedialog.cpp:263
 msgid "Override global volume settings"
 msgstr "ביטול הגדרות עוצמת שמע מקיפות"
 
-#: gui/editgamedialog.cpp:274
+#: gui/editgamedialog.cpp:265
 msgctxt "lowres"
 msgid "Override global volume settings"
 msgstr "ביטול הגדרות עוצמת שמע מקיפות"
 
-#: gui/editgamedialog.cpp:285 gui/options.cpp:2172
+#: gui/editgamedialog.cpp:276 gui/options.cpp:2172
 msgid "MIDI"
 msgstr "MIDI"
 
-#: gui/editgamedialog.cpp:288
+#: gui/editgamedialog.cpp:279
 msgid "Override global MIDI settings"
 msgstr "ביטול הגדרות MIDI מקיפות"
 
-#: gui/editgamedialog.cpp:290
+#: gui/editgamedialog.cpp:281
 msgctxt "lowres"
 msgid "Override global MIDI settings"
 msgstr "ביטול הגדרות MIDI מקיפות"
 
-#: gui/editgamedialog.cpp:300 gui/options.cpp:2178
+#: gui/editgamedialog.cpp:291 gui/options.cpp:2178
 msgid "MT-32"
 msgstr "MT-32"
 
-#: gui/editgamedialog.cpp:303
+#: gui/editgamedialog.cpp:294
 msgid "Override global MT-32 settings"
 msgstr "ביטול הגדרות MT-32 מקיפות"
 
-#: gui/editgamedialog.cpp:305
+#: gui/editgamedialog.cpp:296
 msgctxt "lowres"
 msgid "Override global MT-32 settings"
 msgstr "ביטול הגדרות MT-32 מקיפות"
 
-#: gui/editgamedialog.cpp:314 gui/options.cpp:2185
+#: gui/editgamedialog.cpp:305 gui/options.cpp:2185
 msgid "Paths"
 msgstr "נתיבים"
 
-#: gui/editgamedialog.cpp:316 gui/options.cpp:2187
+#: gui/editgamedialog.cpp:307 gui/options.cpp:2187
 msgctxt "lowres"
 msgid "Paths"
 msgstr "נתיבים"
 
-#: gui/editgamedialog.cpp:323
+#: gui/editgamedialog.cpp:314
 msgid "Game Path:"
 msgstr "נתיב משחק:"
 
-#: gui/editgamedialog.cpp:325
+#: gui/editgamedialog.cpp:316
 msgctxt "lowres"
 msgid "Game Path:"
 msgstr "נתיב משחק:"
 
-#: gui/editgamedialog.cpp:330 gui/options.cpp:2364
+#: gui/editgamedialog.cpp:321 gui/options.cpp:2364
 msgid "Extra Path:"
 msgstr "נתיב תוספות:"
 
-#: gui/editgamedialog.cpp:330 gui/editgamedialog.cpp:332
-#: gui/editgamedialog.cpp:333
+#: gui/editgamedialog.cpp:321 gui/editgamedialog.cpp:323
+#: gui/editgamedialog.cpp:324
 msgid "Specifies path to additional data used by the game"
 msgstr "נתיב שבו נמצאים נתונים נוספים לשימוש על ידי המשחק"
 
-#: gui/editgamedialog.cpp:332 gui/options.cpp:2366
+#: gui/editgamedialog.cpp:323 gui/options.cpp:2366
 msgctxt "lowres"
 msgid "Extra Path:"
 msgstr "נתיב תוספות:"
 
-#: gui/editgamedialog.cpp:339 gui/options.cpp:2340
+#: gui/editgamedialog.cpp:330 gui/options.cpp:2340
 msgid "Save Path:"
 msgstr "נתיב שמירה:"
 
-#: gui/editgamedialog.cpp:339 gui/editgamedialog.cpp:341
-#: gui/editgamedialog.cpp:342 gui/options.cpp:2340 gui/options.cpp:2342
+#: gui/editgamedialog.cpp:330 gui/editgamedialog.cpp:332
+#: gui/editgamedialog.cpp:333 gui/options.cpp:2340 gui/options.cpp:2342
 msgid "Specifies where your saved games are put"
 msgstr "נתיב שבו ישמרו המשחקים שנשמרו"
 
-#: gui/editgamedialog.cpp:341 gui/options.cpp:2342
+#: gui/editgamedialog.cpp:332 gui/options.cpp:2342
 msgctxt "lowres"
 msgid "Save Path:"
 msgstr "נתיב שמירה:"
 
-#: gui/editgamedialog.cpp:353 engines/dialogs.cpp:342
+#: gui/editgamedialog.cpp:344 engines/dialogs.cpp:342
 msgid "Achievements"
 msgstr "הישגים"
 
-#: gui/editgamedialog.cpp:357 engines/dialogs.cpp:346
+#: gui/editgamedialog.cpp:348 engines/dialogs.cpp:346
 msgid "Statistics"
 msgstr "סטטיסטיקה"
 
-#: gui/editgamedialog.cpp:381 gui/editgamedialog.cpp:483
-#: gui/editgamedialog.cpp:545 gui/editgamedialog.cpp:612 gui/options.cpp:1141
+#: gui/editgamedialog.cpp:372 gui/editgamedialog.cpp:474
+#: gui/editgamedialog.cpp:536 gui/editgamedialog.cpp:603 gui/options.cpp:1141
 #: gui/options.cpp:2270 gui/options.cpp:2272 gui/options.cpp:2277
 #: gui/options.cpp:2308 gui/options.cpp:2351 gui/options.cpp:2367
 #: gui/options.cpp:2376 gui/options.cpp:2763 gui/options.cpp:2765
@@ -495,30 +495,30 @@ msgctxt "path"
 msgid "None"
 msgstr "לא נבחר"
 
-#: gui/editgamedialog.cpp:386 gui/editgamedialog.cpp:489
-#: gui/editgamedialog.cpp:616 gui/options.cpp:2269 gui/options.cpp:2271
+#: gui/editgamedialog.cpp:377 gui/editgamedialog.cpp:480
+#: gui/editgamedialog.cpp:607 gui/options.cpp:2269 gui/options.cpp:2271
 #: gui/options.cpp:2762 gui/options.cpp:2764 gui/options.cpp:3056
 #: gui/options.cpp:3062 backends/platform/wii/options.cpp:55
 msgid "Default"
 msgstr "ברירת מחדל"
 
-#: gui/editgamedialog.cpp:538 gui/options.cpp:3083
+#: gui/editgamedialog.cpp:529 gui/options.cpp:3083
 msgid "Select SoundFont"
 msgstr "בחירת SoundFont"
 
-#: gui/editgamedialog.cpp:577
+#: gui/editgamedialog.cpp:568
 msgid "Select additional game directory"
 msgstr "בחירת תיקית משחק נוספת"
 
-#: gui/editgamedialog.cpp:590 gui/options.cpp:2969
+#: gui/editgamedialog.cpp:581 gui/options.cpp:2969
 msgid "Select directory for saved games"
 msgstr "בחירת תיקיה לשמירת משחקים"
 
-#: gui/editgamedialog.cpp:597 gui/options.cpp:2976
+#: gui/editgamedialog.cpp:588 gui/options.cpp:2976
 msgid "The chosen directory cannot be written to. Please select another one."
 msgstr "לא ניתן לכתוב אל התיקיה שנבחרה. נא לבחור תיקיה אחרת."
 
-#: gui/editgamedialog.cpp:602
+#: gui/editgamedialog.cpp:593
 msgid ""
 "Saved games sync feature doesn't work with non-default directories. If you "
 "want your saved games to sync, use default directory."
@@ -526,7 +526,7 @@ msgstr ""
 "סנכרון משחקים שנשמרו לא עובד עם תיקיות שאינן ברירת המחדל. יש להשתמש בתיקית "
 "ברירת המחדל כדי לסנכרן את המשחקים שנשמרו."
 
-#: gui/editgamedialog.cpp:628
+#: gui/editgamedialog.cpp:619
 msgid "This game ID is already taken. Please choose another one."
 msgstr "מזהה המשחק כבר תפוס. נא לבחור מזהה אחר."
 
@@ -2017,17 +2017,17 @@ msgid "<"
 msgstr "<"
 
 #. I18N: Pre means 'Predictive', leave '*' as is
-#: gui/predictivedialog.cpp:114 gui/predictivedialog.cpp:601
+#: gui/predictivedialog.cpp:114 gui/predictivedialog.cpp:599
 msgid "*  Pre"
 msgstr "* קדם"
 
 #. I18N: 'Num' means Numbers
-#: gui/predictivedialog.cpp:604
+#: gui/predictivedialog.cpp:602
 msgid "*  Num"
 msgstr "* מספר"
 
 #. I18N: 'Abc' means Latin alphabet input
-#: gui/predictivedialog.cpp:607
+#: gui/predictivedialog.cpp:605
 msgid "*  Abc"
 msgstr "*  א ב ג"
 
@@ -2222,7 +2222,7 @@ msgstr ""
 "ניתן לשנות הגדרה זו בהמשך בכרטיסייה שונות\n"
 "בתיבת הדו-שיח אפשרויות."
 
-#: gui/widget.cpp:440 gui/widget.cpp:442 gui/widget.cpp:448 gui/widget.cpp:450
+#: gui/widget.cpp:437 gui/widget.cpp:439 gui/widget.cpp:445 gui/widget.cpp:447
 msgid "Clear value"
 msgstr "ניקוי ערך"
 
@@ -2767,7 +2767,7 @@ msgstr "תיבת דו-שיח לניבוי קלט"
 msgid "Confirm"
 msgstr "אישור"
 
-#: graphics/renderer.cpp:33 backends/graphics/opengl/opengl-graphics.cpp:173
+#: graphics/renderer.cpp:33 backends/graphics/opengl/opengl-graphics.cpp:172
 msgid "OpenGL"
 msgstr "OpenGL"
 
@@ -3036,68 +3036,68 @@ msgstr "לחיצה כבויה"
 msgid "Touchscreen 'Tap Mode' - Hover (DPad Clicks)"
 msgstr "מסך מגע 'מצב לחיצה' - ריחוף עם הסמן (הקשות על DPaD)"
 
-#: backends/graphics/opengl/opengl-graphics.cpp:252
+#: backends/graphics/opengl/opengl-graphics.cpp:251
 #: backends/graphics/surfacesdl/surfacesdl-graphics.cpp:72
 #: backends/graphics3d/openglsdl/openglsdl-graphics3d.cpp:235
 #: engines/twine/metaengine.cpp:228
 msgid "Center"
 msgstr "מרכז"
 
-#: backends/graphics/opengl/opengl-graphics.cpp:253
+#: backends/graphics/opengl/opengl-graphics.cpp:252
 #: backends/graphics/surfacesdl/surfacesdl-graphics.cpp:73
 #: backends/graphics3d/openglsdl/openglsdl-graphics3d.cpp:236
 msgid "Pixel-perfect scaling"
 msgstr "שכלול-פיקסלים בהתאמת קנה מידה"
 
-#: backends/graphics/opengl/opengl-graphics.cpp:254
+#: backends/graphics/opengl/opengl-graphics.cpp:253
 #: backends/graphics3d/openglsdl/openglsdl-graphics3d.cpp:237
 msgid "Even pixels scaling"
 msgstr "התאמת קנה מידה לפיקסלים זוגיים"
 
-#: backends/graphics/opengl/opengl-graphics.cpp:255
+#: backends/graphics/opengl/opengl-graphics.cpp:254
 #: backends/graphics/surfacesdl/surfacesdl-graphics.cpp:74
 #: backends/graphics3d/openglsdl/openglsdl-graphics3d.cpp:238
 msgid "Fit to window"
 msgstr "התאמה לחלון"
 
-#: backends/graphics/opengl/opengl-graphics.cpp:256
+#: backends/graphics/opengl/opengl-graphics.cpp:255
 #: backends/graphics/surfacesdl/surfacesdl-graphics.cpp:75
 #: backends/graphics3d/openglsdl/openglsdl-graphics3d.cpp:239
 msgid "Stretch to window"
 msgstr "מתיחה לחלון"
 
-#: backends/graphics/opengl/opengl-graphics.cpp:257
+#: backends/graphics/opengl/opengl-graphics.cpp:256
 #: backends/graphics/surfacesdl/surfacesdl-graphics.cpp:76
 #: backends/graphics3d/openglsdl/openglsdl-graphics3d.cpp:240
 msgid "Fit to window (4:3)"
 msgstr "התאמה לחלון (4: 3)"
 
-#: backends/graphics/openglsdl/openglsdl-graphics.cpp:701
+#: backends/graphics/openglsdl/openglsdl-graphics.cpp:702
 #, c-format
 msgid "Resolution: %dx%d"
 msgstr "רזולוציה: %dx%d"
 
-#: backends/graphics/openglsdl/openglsdl-graphics.cpp:716
+#: backends/graphics/openglsdl/openglsdl-graphics.cpp:717
 #: backends/graphics/surfacesdl/surfacesdl-graphics.cpp:2450
 msgid "Enabled aspect ratio correction"
 msgstr "תיקון יחס ממדים מופעל"
 
-#: backends/graphics/openglsdl/openglsdl-graphics.cpp:718
+#: backends/graphics/openglsdl/openglsdl-graphics.cpp:719
 #: backends/graphics/surfacesdl/surfacesdl-graphics.cpp:2456
 msgid "Disabled aspect ratio correction"
 msgstr "תיקון יחס ממדים מושבת"
 
-#: backends/graphics/openglsdl/openglsdl-graphics.cpp:731
+#: backends/graphics/openglsdl/openglsdl-graphics.cpp:732
 #: backends/graphics/surfacesdl/surfacesdl-graphics.cpp:2472
 msgid "Filtering enabled"
 msgstr "סינון מופעל"
 
-#: backends/graphics/openglsdl/openglsdl-graphics.cpp:733
+#: backends/graphics/openglsdl/openglsdl-graphics.cpp:734
 #: backends/graphics/surfacesdl/surfacesdl-graphics.cpp:2474
 msgid "Filtering disabled"
 msgstr "הסינון מושבת"
 
-#: backends/graphics/openglsdl/openglsdl-graphics.cpp:759
+#: backends/graphics/openglsdl/openglsdl-graphics.cpp:760
 #: backends/graphics/surfacesdl/surfacesdl-graphics.cpp:2501
 msgid "Stretch mode"
 msgstr "מצב מתיחה"
@@ -3790,44 +3790,44 @@ msgstr "מזעור"
 #. In Blade Runner's official localizations, there is a description of this keymap
 #. on the KIA Help Page, under Keyboard Shortcuts. In the English version it is
 #. ONLINE HELP
-#: backends/platform/sdl/macosx/appmenu_osx.mm:237
+#: backends/platform/sdl/macosx/appmenu_osx.mm:239
 #: engines/bladerunner/metaengine.cpp:231 engines/zvision/metaengine.cpp:157
 msgid "Help"
 msgstr "עזרה"
 
-#: backends/platform/sdl/macosx/appmenu_osx.mm:242
+#: backends/platform/sdl/macosx/appmenu_osx.mm:244
 msgid "User Manual"
 msgstr "הוראות משתמש"
 
-#: backends/platform/sdl/macosx/appmenu_osx.mm:244
+#: backends/platform/sdl/macosx/appmenu_osx.mm:246
 msgid "General Information"
 msgstr "מידע כללי"
 
-#: backends/platform/sdl/macosx/appmenu_osx.mm:245
+#: backends/platform/sdl/macosx/appmenu_osx.mm:247
 msgid "What's New in ScummVM"
 msgstr "מה חדש בScummVM"
 
-#: backends/platform/sdl/macosx/appmenu_osx.mm:247
+#: backends/platform/sdl/macosx/appmenu_osx.mm:249
 msgid "Credits"
 msgstr "קרדיטים"
 
-#: backends/platform/sdl/macosx/appmenu_osx.mm:248
+#: backends/platform/sdl/macosx/appmenu_osx.mm:250
 msgid "GPL License"
 msgstr "רישיון GPL"
 
-#: backends/platform/sdl/macosx/appmenu_osx.mm:249
+#: backends/platform/sdl/macosx/appmenu_osx.mm:251
 msgid "LGPL License"
 msgstr "רישיון LGPL"
 
-#: backends/platform/sdl/macosx/appmenu_osx.mm:250
+#: backends/platform/sdl/macosx/appmenu_osx.mm:252
 msgid "Freefont License"
 msgstr "רישיון Freefont"
 
-#: backends/platform/sdl/macosx/appmenu_osx.mm:251
+#: backends/platform/sdl/macosx/appmenu_osx.mm:253
 msgid "OFL License"
 msgstr "רישיון OFL"
 
-#: backends/platform/sdl/macosx/appmenu_osx.mm:252
+#: backends/platform/sdl/macosx/appmenu_osx.mm:254
 msgid "BSD License"
 msgstr "רישיון BSD"
 
@@ -4078,7 +4078,7 @@ msgid "Do not emulate NTSC artifacts for text"
 msgstr "אין לדמות תופעות לוואי של NTSC לטקסט"
 
 #: engines/agi/detection.cpp:86 engines/cine/detection.cpp:51
-#: engines/drascula/detection.cpp:303 engines/dreamweb/detection.cpp:54
+#: engines/drascula/detection.cpp:303 engines/dreamweb/detection.cpp:51
 #: engines/groovie/detection.cpp:309 engines/neverhood/detection.cpp:139
 #: engines/sci/detection_options.h:105 engines/sherlock/detection.cpp:58
 #: engines/toltecs/detection.cpp:228 engines/trecision/detection.cpp:219
@@ -4087,7 +4087,7 @@ msgid "Use original save/load screens"
 msgstr "להשתמש במסכי שמירה / טעינה מקוריים"
 
 #: engines/agi/detection.cpp:87 engines/cine/detection.cpp:52
-#: engines/drascula/detection.cpp:304 engines/dreamweb/detection.cpp:55
+#: engines/drascula/detection.cpp:304 engines/dreamweb/detection.cpp:52
 #: engines/groovie/detection.cpp:310 engines/neverhood/detection.cpp:140
 #: engines/sci/detection_options.h:106 engines/sherlock/detection.cpp:59
 #: engines/toltecs/detection.cpp:229 engines/trecision/detection.cpp:220
@@ -4161,7 +4161,7 @@ msgstr ""
 #: engines/lab/savegame.cpp:257 engines/mads/nebular/dialogs_nebular.cpp:376
 #: engines/mtropolis/saveload.cpp:120 engines/neverhood/menumodule.cpp:902
 #: engines/prince/saveload.cpp:63 engines/sci/engine/guest_additions.cpp:745
-#: engines/sci/engine/kfile.cpp:1206 engines/sherlock/scalpel/scalpel.cpp:1262
+#: engines/sci/engine/kfile.cpp:1209 engines/sherlock/scalpel/scalpel.cpp:1262
 #: engines/sherlock/tattoo/widget_files.cpp:93 engines/startrek/saveload.cpp:67
 #: engines/toltecs/menu.cpp:272 engines/toon/toon.cpp:3859
 #: engines/zvision/file/save_manager.cpp:61
@@ -4180,7 +4180,7 @@ msgstr "שחזור משחק:"
 #: engines/lab/savegame.cpp:257 engines/mads/nebular/dialogs_nebular.cpp:376
 #: engines/mtropolis/saveload.cpp:120 engines/neverhood/menumodule.cpp:902
 #: engines/prince/saveload.cpp:63 engines/sci/engine/guest_additions.cpp:746
-#: engines/sci/engine/kfile.cpp:1206 engines/sherlock/scalpel/scalpel.cpp:1262
+#: engines/sci/engine/kfile.cpp:1209 engines/sherlock/scalpel/scalpel.cpp:1262
 #: engines/sherlock/tattoo/widget_files.cpp:93 engines/startrek/saveload.cpp:67
 #: engines/toltecs/menu.cpp:272 engines/toon/toon.cpp:3859
 #: engines/zvision/file/save_manager.cpp:61 engines/zvision/metaengine.cpp:198
@@ -4776,30 +4776,30 @@ msgstr ""
 "\n"
 "לחץ על OK כדי להמיר אותם כעת, אחרת תישאל שוב בפעם הבאה שתתחיל במשחק.\n"
 
-#: engines/dreamweb/detection.cpp:66
+#: engines/dreamweb/detection.cpp:63
 msgid "Use bright palette mode"
 msgstr "השתמש במצב לוח בהיר"
 
-#: engines/dreamweb/detection.cpp:67
+#: engines/dreamweb/detection.cpp:64
 msgid "Display graphics using the game's bright palette"
 msgstr "הציג גרפיקה באמצעות לוח הצבעים של המשחק"
 
-#: engines/dreamweb/detection.cpp:79
+#: engines/dreamweb/detection.cpp:76
 msgid "Enable Text to Speech for Objects, Options, and the Bible Quote"
 msgstr "הפעלת המרת טקסט לדיבור עבור עצמים, אפשרויות וציטוטים מהתנ\"ך"
 
-#: engines/dreamweb/detection.cpp:80 engines/lure/detection.cpp:45
+#: engines/dreamweb/detection.cpp:77 engines/lure/detection.cpp:45
 #: engines/mads/detection.cpp:124 engines/sci/detection_options.h:222
 #: engines/sherlock/detection.cpp:132 engines/supernova/detection.cpp:54
-#: engines/twine/detection.cpp:1138
+#: engines/twine/detection.cpp:552
 msgid "Use TTS to read the descriptions (if TTS is available)"
 msgstr "שימוש בהמרת טקסט לדיבור לקריאת תיאורים (אם זמינה)"
 
-#: engines/dreamweb/detection.cpp:91
+#: engines/dreamweb/detection.cpp:88
 msgid "Enable Text to Speech for Subtitles"
 msgstr "בפעלת המרת טקסט לדיבור עבור כתוביות"
 
-#: engines/dreamweb/detection.cpp:92
+#: engines/dreamweb/detection.cpp:89
 msgid "Use TTS to read the subtitles (if TTS is available)"
 msgstr "שימוש בהמרת טקסט לדיבור כדי לקרוא את הכתוביות (אם זמינה)"
 
@@ -5600,7 +5600,7 @@ msgid "This puzzle is not available in the trial version of the game"
 msgstr "חידה זו אינה זמינה בגרסת הניסיון של המשחק"
 
 #: engines/lure/detection.cpp:44 engines/mads/detection.cpp:123
-#: engines/sherlock/detection.cpp:131 engines/twine/detection.cpp:1137
+#: engines/sherlock/detection.cpp:131 engines/twine/detection.cpp:551
 msgid "TTS Narrator"
 msgstr "קריין המרת טקסט לדיבור"
 
@@ -5923,50 +5923,50 @@ msgstr ""
 "המשחק. ScummVM לא יכול לעשות זאת ו\n"
 "האתר כבר לא קיים."
 
-#: engines/mtropolis/detection.cpp:44
+#: engines/mtropolis/detection.cpp:45
 msgid "16:9 widescreen mod"
 msgstr "טלאי מסך רחב 16:9"
 
-#: engines/mtropolis/detection.cpp:45
+#: engines/mtropolis/detection.cpp:46
 msgid ""
 "Removes letterboxing and moves some display elements, improving coverage on "
 "widescreen displays"
 msgstr ""
 "הסרת מעטפות והזזת אלמנטים תצוגתיים, כדי לשפר את הכיסוי עבור תצוגות מסך רחב"
 
-#: engines/mtropolis/detection.cpp:55
+#: engines/mtropolis/detection.cpp:56
 msgid "Improved music mixing"
 msgstr "עיבוד מוזיקה משופר"
 
-#: engines/mtropolis/detection.cpp:56
+#: engines/mtropolis/detection.cpp:57
 msgid ""
 "Enables dynamic MIDI mixer, improving quality, but behaving less like "
 "mTropolis Player."
 msgstr ""
 "הפעלת מערבל MIDI דינמי, האיכות משופרת, אך ההתנהגות פחות דומה לנגן mTropolis ."
 
-#: engines/mtropolis/detection.cpp:66
+#: engines/mtropolis/detection.cpp:67
 msgid "Autosave at progress points"
 msgstr "שמירה אוטומטית בנקודות התקדמות"
 
-#: engines/mtropolis/detection.cpp:67
+#: engines/mtropolis/detection.cpp:68
 msgid "Automatically saves the game after completing puzzles and chapters."
 msgstr "שמירה אוטומטית בסיום חידות ופרקים."
 
-#: engines/mtropolis/detection.cpp:77
+#: engines/mtropolis/detection.cpp:78
 msgid "Enable short transitions"
 msgstr "הפעלת מעברים קצרים"
 
-#: engines/mtropolis/detection.cpp:78
+#: engines/mtropolis/detection.cpp:79
 msgid ""
 "Enables transitions that are set to maximum rate instead of skipping them."
 msgstr "הפעלת מעברים שנקבעו לקצב מרבי במקום דילוג עליהם."
 
-#: engines/mtropolis/detection.cpp:88
+#: engines/mtropolis/detection.cpp:89
 msgid "Enable subtitles for important sound effects"
 msgstr "הפעלת כתוביות עבור אפקטים קוליים חשובים"
 
-#: engines/mtropolis/detection.cpp:89
+#: engines/mtropolis/detection.cpp:90
 msgid ""
 "Enables subtitles for important sound effects.  This may reduce the "
 "difficulty of sound recognition puzzles and minigames."
@@ -5974,11 +5974,11 @@ msgstr ""
 "הפעלת כתוביות עבור אפקטים קוליים חשובים.  זה עשוי להפחית את רמת הקושי של "
 "חידות ומשחקונים שתלויים בזיהוי קולי."
 
-#: engines/mtropolis/detection.cpp:99
+#: engines/mtropolis/detection.cpp:100
 msgid "Start with debugger"
 msgstr "הפעלה עם ניפוי תקלים"
 
-#: engines/mtropolis/detection.cpp:100
+#: engines/mtropolis/detection.cpp:101
 msgid "Starts with the debugger dashboard active."
 msgstr "התחלה עם לוח ניפוי תקלים פעיל."
 
@@ -6087,7 +6087,6 @@ msgid "Open general cheat menu"
 msgstr "פתיחת תפריט רמאויות כללי"
 
 #: engines/nancy/input.cpp:255
-#, fuzzy
 msgid "Open event flags cheat menu"
 msgstr "פתיחת תפריט רמאויות של דגלי אירועים"
 
@@ -7477,6 +7476,9 @@ msgid ""
 "compression is not supported anymore for this game, audio will be disabled.\n"
 "Please copy the game from the original media without compression."
 msgstr ""
+"נתגלו קבצי שמע שנדחסו באמצעות ScummVM Tools; *.BUN/*.SOU\n"
+"הדחיסה עבור משחק זה כבר אינה נתמכת, השמע ינוטרל.\n"
+"נא להעתיק את המשחק מהמדיה המקורית ללא הדחיסה."
 
 #: engines/scumm/scumm.cpp:1917
 #, c-format
@@ -7492,6 +7494,8 @@ msgid ""
 "This particular version of Monkey Island 1 is known to miss some\n"
 "required resources for MT-32. Using AdLib instead."
 msgstr ""
+"גרסה זו של אי הקופים 1 ידועה כחסרה\n"
+"משאבים מסוים שנדרשים עבור MT-32. משתמשים ב-AdLib במקום."
 
 #: engines/scumm/scumm.cpp:3242
 msgid ""
@@ -7609,13 +7613,15 @@ msgstr "הפעלת טעינה של משאבים חלופיים חיצוניים.
 
 #: engines/stark/detection.cpp:398
 msgid "Enable linear filtering of the backgrounds images"
-msgstr ""
+msgstr "הפעלת סינון לינארי של תמונות הרקע"
 
 #: engines/stark/detection.cpp:399
 msgid ""
 "When linear filtering is enabled the background graphics are smoother in "
 "full screen mode, at the cost of some details."
 msgstr ""
+"כאשר סינון לינארי מופעל תמונות הרקע יהיו חלקות יותר במצב מסך מלא, על חשבון "
+"פרטים מסוימים."
 
 #: engines/stark/detection.cpp:409 engines/ultima/detection.cpp:143
 msgid "Enable font anti-aliasing"
@@ -7623,7 +7629,7 @@ msgstr "הפעלת החלקת עקומות עבור גופנים"
 
 #: engines/stark/detection.cpp:410 engines/ultima/detection.cpp:144
 msgid "When font anti-aliasing is enabled, the text is smoother."
-msgstr ""
+msgstr "כאשר החלקת-עקומות של גופנים מופעלת, הטקסט חלק יותר."
 
 #: engines/stark/stark.cpp:106
 msgid "Software renderer does not support modded assets"
@@ -7639,20 +7645,22 @@ msgid ""
 "designed. The Steam release is known to be missing it. You can get the fonts "
 "from the demo version of the game."
 msgstr ""
+"התיקיה 'fonts' נדרשת כדי לחוות את סגנון הטקסט כפי שעוצב. גרסת Stream ידועה "
+"כחסרה תיקיה זו. ניתן להשיג את הגופנים מגרסת ההדגמה של המשחק."
 
 #: engines/stark/stark.cpp:312
 msgid ""
 "'gui.ini' is recommended to get proper font settings for the game "
 "localization."
-msgstr ""
+msgstr "מומלץ להשתמש ב-'gui.ini' עבור הגדרות גופן ראויות לגיור המשחק."
 
 #: engines/stark/stark.cpp:318
 msgid "'language.ini' is recommended to get localized confirmation dialogs."
-msgstr ""
+msgstr "מומלץ להשתמש ב-'language.ini' עבור שיחות אישור מגוירות."
 
 #: engines/stark/stark.cpp:324
 msgid "'game.exe' is recommended to get styled confirmation dialogs."
-msgstr ""
+msgstr "מומלץ להשתמש ב-'game.exe' עבור שיחות אישור מסוגננות."
 
 #: engines/supernova/supernova.cpp:192
 #, c-format
@@ -7680,6 +7688,8 @@ msgid ""
 "Failed to save temporary game state. Make sure your save game directory is "
 "set in ScummVM and that you can write to it."
 msgstr ""
+"נכשל בשמירת מצב משחק זמני. נא לוודא שתיקית השמירות נקבעה וש-ScummVM מסוגל "
+"לכתוב אליה."
 
 #: engines/supernova/supernova.cpp:834
 msgid "Failed to load temporary game state."
@@ -7816,96 +7826,96 @@ msgstr "האם לצאת?"
 msgid "Unable to locate the '%s' data file."
 msgstr "לא ניתן לאתר את קובץ נתוני המנוע '%s'."
 
-#: engines/twine/detection.cpp:272
+#: engines/twine/detection.cpp:187
 msgid "This version requires Giflib which was not compiled into ScummVM"
 msgstr "גרסה זו דורשת את הספריה Giflib שלא נבנתה אל תוך ScummVM"
 
-#: engines/twine/detection.cpp:1014
+#: engines/twine/detection.cpp:428
 msgid "Enable wall collisions"
-msgstr ""
+msgstr "הפעלת התנגשות עם קירות"
 
-#: engines/twine/detection.cpp:1015
+#: engines/twine/detection.cpp:429
 msgid "Enable the original wall collision damage"
-msgstr ""
+msgstr "הפעלת הנזק המקורי בהתנגשות עם קירות"
 
-#: engines/twine/detection.cpp:1026
+#: engines/twine/detection.cpp:440
 msgid "Disable save menu"
 msgstr "כיבוי תפריט שמירה"
 
-#: engines/twine/detection.cpp:1027
+#: engines/twine/detection.cpp:441
 msgid ""
 "The original only had autosaves. This allows you to save whenever you want."
-msgstr ""
+msgstr "במקור היו רק שמירות אוטומטיות. אפשרות זו מאפשרת לשמור בכל עת."
 
-#: engines/twine/detection.cpp:1037
+#: engines/twine/detection.cpp:451
 msgid "Enable debug mode"
 msgstr "הפעלת מצב ניפוי תקלים"
 
-#: engines/twine/detection.cpp:1038
+#: engines/twine/detection.cpp:452
 msgid "Enable the debug mode"
 msgstr "הפעלת מצב ניפוי התקלים"
 
-#: engines/twine/detection.cpp:1048
+#: engines/twine/detection.cpp:462
 msgid "Enable audio CD"
 msgstr "הפעלת תקליטור שמע"
 
-#: engines/twine/detection.cpp:1049
+#: engines/twine/detection.cpp:463
 msgid "Enable the original audio cd track"
 msgstr "הפעלת רצועת השמע המקורית מהתקליטור"
 
-#: engines/twine/detection.cpp:1059
+#: engines/twine/detection.cpp:473
 msgid "Enable sound"
 msgstr "הפעלת צליל"
 
-#: engines/twine/detection.cpp:1060
+#: engines/twine/detection.cpp:474
 msgid "Enable the sound for the game"
 msgstr "הפעלת צליל עבור המשחק"
 
-#: engines/twine/detection.cpp:1070
+#: engines/twine/detection.cpp:484
 msgid "Enable voices"
 msgstr "הפעלת קולות"
 
-#: engines/twine/detection.cpp:1071
+#: engines/twine/detection.cpp:485
 msgid "Enable the voices for the game"
 msgstr "הפעלת קולות עבור המשחק"
 
-#: engines/twine/detection.cpp:1081
+#: engines/twine/detection.cpp:495
 msgid "Enable text"
 msgstr "הפעלת טקסט"
 
-#: engines/twine/detection.cpp:1082
+#: engines/twine/detection.cpp:496
 msgid "Enable the text for the game"
 msgstr "הפעלת טקסט עבור המשחק"
 
-#: engines/twine/detection.cpp:1092
+#: engines/twine/detection.cpp:506
 msgid "Enable movies"
 msgstr "הפעלת סרטים"
 
-#: engines/twine/detection.cpp:1093
+#: engines/twine/detection.cpp:507
 msgid "Enable the cutscenes for the game"
 msgstr "הפעלת סרטוני מעבר עבור המשחק"
 
-#: engines/twine/detection.cpp:1103
+#: engines/twine/detection.cpp:517
 msgid "Enable mouse"
 msgstr "הפעלת עכבר"
 
-#: engines/twine/detection.cpp:1104
+#: engines/twine/detection.cpp:518
 msgid "Enable the mouse for the UI"
 msgstr "הפעלת עכבר עבור הממשק"
 
-#: engines/twine/detection.cpp:1114
+#: engines/twine/detection.cpp:528
 msgid "Use the USA version"
 msgstr "שימוש בגרסה האמריקאית"
 
-#: engines/twine/detection.cpp:1115
+#: engines/twine/detection.cpp:529
 msgid "Enable the USA specific version flags"
 msgstr "הפעלת תכונות מסוימות עבור הגרסה האמריקאית"
 
-#: engines/twine/detection.cpp:1125 engines/ultima/detection.cpp:99
+#: engines/twine/detection.cpp:539 engines/ultima/detection.cpp:99
 msgid "Enable high resolution"
 msgstr "הפעלת הפרדה גבוהה"
 
-#: engines/twine/detection.cpp:1126 engines/ultima/detection.cpp:100
+#: engines/twine/detection.cpp:540 engines/ultima/detection.cpp:100
 msgid "Enable a higher resolution for the game"
 msgstr "הפעלת הפרדה גבוהה יותר עבור המשחק"
 
@@ -7919,35 +7929,35 @@ msgstr "ניפוי תקלים בחדר הקודם"
 
 #: engines/twine/metaengine.cpp:114
 msgid "Debug Apply Celling Grid"
-msgstr ""
+msgstr "ניפוי תקלים החלת רשת תאים"
 
 #: engines/twine/metaengine.cpp:119
 msgid "Debug Increase Celling Grid Index"
-msgstr ""
+msgstr "ניפוי תקלים הגברת מיקום רשת תאים"
 
 #: engines/twine/metaengine.cpp:124
 msgid "Debug Decrease Celling Grid Index"
-msgstr ""
+msgstr "ניפוי תקלים הפחתת מיקום רשת תאים"
 
 #: engines/twine/metaengine.cpp:129
 msgid "Debug Grid Camera Up"
-msgstr ""
+msgstr "ניפוי תקלים רשת מצלמה למעלה"
 
 #: engines/twine/metaengine.cpp:134
 msgid "Debug Grid Camera Down"
-msgstr ""
+msgstr "ניפוי תקלים רשת מצלמה למטה"
 
 #: engines/twine/metaengine.cpp:139
 msgid "Debug Grid Camera Left"
-msgstr ""
+msgstr "ניפוי תקלים רשת מצלמה שמאלה"
 
 #: engines/twine/metaengine.cpp:145
 msgid "Debug Grid Camera Right"
-msgstr ""
+msgstr "ניפוי תקלים רשת מצלמה ימינה"
 
 #: engines/twine/metaengine.cpp:150
 msgid "Place actor at center of screen"
-msgstr ""
+msgstr "מיקום השחקן במרכז המסך"
 
 #: engines/twine/metaengine.cpp:155
 msgid "Debug Menu"
@@ -7959,19 +7969,19 @@ msgstr "הרצת תפריט ניפוי תקלים"
 
 #: engines/twine/metaengine.cpp:165 engines/twine/metaengine.cpp:185
 msgid "Normal Behaviour"
-msgstr ""
+msgstr "התנהגות רגילה"
 
 #: engines/twine/metaengine.cpp:170 engines/twine/metaengine.cpp:190
 msgid "Athletic Behaviour"
-msgstr ""
+msgstr "התנהגות ספורטיבית"
 
 #: engines/twine/metaengine.cpp:175 engines/twine/metaengine.cpp:195
 msgid "Aggressive Behaviour"
-msgstr ""
+msgstr "התנהגות תוקפנית"
 
 #: engines/twine/metaengine.cpp:180 engines/twine/metaengine.cpp:200
 msgid "Discreet Behaviour"
-msgstr ""
+msgstr "התנהגות התגנבותית"
 
 #: engines/twine/metaengine.cpp:205
 msgid "Behaviour Action"
@@ -7979,7 +7989,7 @@ msgstr "פעולת התנהגות"
 
 #: engines/twine/metaengine.cpp:211
 msgid "Change Behaviour"
-msgstr ""
+msgstr "החלפת התנהגות"
 
 #: engines/twine/metaengine.cpp:223
 msgid "Options Menu"
@@ -7987,11 +7997,11 @@ msgstr "תפריט אפשרויות"
 
 #: engines/twine/metaengine.cpp:235
 msgid "Use Selected Object"
-msgstr ""
+msgstr "שימוש בחפץ שנבחר"
 
 #: engines/twine/metaengine.cpp:241
 msgid "Throw Magic Ball"
-msgstr ""
+msgstr "הטלת כדור קסם"
 
 #: engines/twine/metaengine.cpp:255
 msgid "Move Backward"
@@ -7999,11 +8009,11 @@ msgstr "תזוזה לאחור"
 
 #: engines/twine/metaengine.cpp:276
 msgid "Use Protopack"
-msgstr ""
+msgstr "שימוש בפרוטו-פק"
 
 #: engines/twine/metaengine.cpp:281
 msgid "Open Holomap"
-msgstr ""
+msgstr "פתיחת הולומפ"
 
 #: engines/twine/metaengine.cpp:294
 msgid "Special Action"
@@ -8047,7 +8057,7 @@ msgstr "הפרדה גבוהה כבויה"
 #: engines/twine/parser/text.cpp:35
 msgctxt "Options menu"
 msgid "Wall collision on"
-msgstr ""
+msgstr "התנגשות בקירות מופעלת"
 
 #: engines/twine/parser/text.cpp:36
 msgctxt "Options menu"
@@ -8056,11 +8066,11 @@ msgstr "התנגשות בקירות כבויה"
 
 #: engines/ultima/detection.cpp:66
 msgid "Enable frame skipping"
-msgstr ""
+msgstr "הפעלת דילוג על תמונות"
 
 #: engines/ultima/detection.cpp:67
 msgid "Allow the game to skip animation frames when running too slow."
-msgstr ""
+msgstr "המשחק ידלג על תמונות בהנפשה כאשר הוא רץ לאט מדי."
 
 #: engines/ultima/detection.cpp:77
 msgid "Enable frame limiting"
@@ -8068,7 +8078,7 @@ msgstr "הפעלת מגבלת תמונות"
 
 #: engines/ultima/detection.cpp:78
 msgid "Limits the speed of the game to prevent running too fast."
-msgstr ""
+msgstr "הגבלת מהירות המשחק כדי שלא ירוץ מהר מדי."
 
 #: engines/ultima/detection.cpp:88
 msgid "Enable cheats"
@@ -8076,15 +8086,15 @@ msgstr "הפעלת רמאויות"
 
 #: engines/ultima/detection.cpp:89
 msgid "Allow cheats by commands and a menu when player is clicked."
-msgstr ""
+msgstr "אפשור רמאויות באמצעות פקודות ותפריט כאשר לוחצים על שחקן."
 
 #: engines/ultima/detection.cpp:110
 msgid "Play foot step sounds"
-msgstr ""
+msgstr "השמעת צלילי צעדים"
 
 #: engines/ultima/detection.cpp:111
 msgid "Plays sound when the player moves."
-msgstr ""
+msgstr "השמעת צלילם כאשר השחקן זז."
 
 #: engines/ultima/detection.cpp:121
 msgid "Enable jump to mouse position"
@@ -8093,7 +8103,7 @@ msgstr "הפעלת קפיצה למיקום הסמן"
 #: engines/ultima/detection.cpp:122
 msgid ""
 "Jumping while not moving targets the mouse cursor rather than direction only."
-msgstr ""
+msgstr "קפיצה ללא תנועה ממקדת את סמן העכבר במקום כיוון בלבד."
 
 #: engines/ultima/detection.cpp:132
 msgid "Enable font replacement"
@@ -8101,29 +8111,29 @@ msgstr "הפעלת החלפת גופנים"
 
 #: engines/ultima/detection.cpp:133
 msgid "Replaces game fonts with rendered fonts"
-msgstr ""
+msgstr "החלפת גופני המשחק בגופני מסירה"
 
 #. I18N: Silencer is the player-character in Crusader games, known as the Avatar in Ultima series.
 #: engines/ultima/detection.cpp:155
 msgid "Camera moves with Silencer"
-msgstr ""
+msgstr "תנועת מצלמה עם המשתיק"
 
 #: engines/ultima/detection.cpp:156
 msgid ""
 "Camera tracks the player movement rather than snapping to defined positions."
-msgstr ""
+msgstr "המצלמה תעקוב אחר תנועת השחק במקום להיצמד למיקומים מוגדרים."
 
 #: engines/ultima/detection.cpp:166
 msgid "Always enable Christmas easter-egg"
-msgstr ""
+msgstr "הפעלת תכמין חג המולד תמיד"
 
 #: engines/ultima/detection.cpp:167
 msgid "Enable the Christmas music at any time of year."
-msgstr ""
+msgstr "הפעלת מוזיקת חג המולד בכל ימות השנה."
 
 #: engines/ultima/shared/early/ultima_early.cpp:70
 msgid "Could not find correct ultima.dat datafile"
-msgstr ""
+msgstr "לא ניתן למצוא קובץ נתונים ultima.dat תקין"
 
 #: engines/ultima/shared/engine/data_archive.cpp:80
 #, c-format
@@ -8147,7 +8157,7 @@ msgstr "שומר שמירה מהירה %d"
 
 #: engines/ultima/nuvie/meta_engine.cpp:38
 msgid "Original Save"
-msgstr ""
+msgstr "שמירה מקורית"
 
 #: engines/ultima/nuvie/save/save_game.cpp:211
 msgid "Transfer Character"
@@ -8155,27 +8165,27 @@ msgstr "העברת דמות"
 
 #: engines/ultima/ultima8/meta_engine.cpp:135
 msgid "Ultima VIII"
-msgstr ""
+msgstr "Ultima VIII"
 
 #: engines/ultima/ultima8/meta_engine.cpp:135
 msgid "Crusader"
-msgstr ""
+msgstr "צלבן"
 
 #: engines/ultima/ultima8/meta_engine.cpp:178
 msgid "Ultima VIII Cheats"
-msgstr ""
+msgstr "רמאויות עבור Ultima VIII"
 
 #: engines/ultima/ultima8/meta_engine.cpp:193
 msgid "Ultima VIII Debug"
-msgstr ""
+msgstr "ניפוי תקלים עבור Ultima VIII"
 
 #: engines/ultima/ultima8/gumps/u8_save_gump.cpp:299
 msgid "[corrupt]"
-msgstr ""
+msgstr "[פגום]"
 
 #: engines/ultima/ultima8/gumps/u8_save_gump.cpp:302
 msgid "[outdated]"
-msgstr ""
+msgstr "[פג תוקף]"
 
 #: engines/ultima/ultima8/gumps/u8_save_gump.cpp:305
 msgid "[too modern]"
@@ -8199,11 +8209,12 @@ msgstr "החל סינון בי-לינארי על דמויות בודדות"
 
 #: engines/wintermute/detection.cpp:77
 msgid "Force to use 2D renderer (2D games only)"
-msgstr ""
+msgstr "אילוץ מסירת דו-מימד (משחקים דו-ממדיים בלבד)"
 
 #: engines/wintermute/detection.cpp:78
 msgid "This setting forces ScummVM to use 2D renderer while running 2D games"
 msgstr ""
+"הגדרה זו מאלצת את ScummVM להשתמש במסירת דו-ממד כאשר מריצים משחקים דו-ממדיים"
 
 #: engines/wintermute/metaengine.cpp:64
 msgid "FoxTail support is not compiled in"
@@ -8234,6 +8245,8 @@ msgid ""
 "This game requires 3D capabilities, which is not compiled in. As such, it is "
 "likely to be unplayable totally or partially."
 msgstr ""
+"משחק זה דורש יכולות תחת ממד, שלא נבנו. לכן, סביר להניח שלא ניתן לשחק בכלל או "
+"שניתן לשחק רק באופן חלקי."
 
 #: engines/wintermute/keymapper_tables.h:149
 #: engines/wintermute/keymapper_tables.h:731
@@ -8686,10 +8699,8 @@ msgid "Toggle subtitles"
 msgstr "מיתוג כתוביות"
 
 #: engines/wintermute/keymapper_tables.h:1381
-#, fuzzy
-#| msgid "Hide Others"
 msgid "Hide hints"
-msgstr "הסתרת אחרים"
+msgstr "הסתרת רמזים"
 
 #. I18N: At one of the puzzles game asks to press Up key / Shift key / Down key
 #: engines/wintermute/keymapper_tables.h:1436
@@ -8914,6 +8925,12 @@ msgid ""
 "LiberationSans and LiberationSerif, or FreeMono, FreeSans and FreeSerif "
 "respectively."
 msgstr ""
+"לפני שאפשר לשחק במשחק זה, יש להעתיק את הגופנים הנדרשים אל תיקית התוספות של "
+"ScummVM, או אל תיקית המשחק. בחלונות, יש להעתיק את הגופנים להלן מתוך תיקית "
+"הגופנים של חלונות: Times New Roman, Century Schoolbook, Garamond, Courier "
+"New ו-Arial. לחלופין,ניתן להוריד את חבילת GNU FreeFont או גופני Liberation. "
+"יש להעתיק את כל הגופנים מהחבילה שנבחרה, לדוגמה, FreeMono, FreeSans ו-"
+"FreeSerif או LiberationMono, LiberationSans ו-LiberationSerif בהתאמה."
 
 #~ msgid "Override global shader settings"
 #~ msgstr "דרוס הגדרות shader גלובליות"

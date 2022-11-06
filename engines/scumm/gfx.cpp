@@ -420,7 +420,7 @@ void ScummEngine::initVirtScreen(VirtScreenNumber slot, int top, int width, int 
 	vs->pitch = width * vs->format.bytesPerPixel;
 
 	if (_game.version >= 7) {
-		// Increase the pitch by one; needed to accomodate the extra screen
+		// Increase the pitch by one; needed to accommodate the extra screen
 		// strip which we use to implement smooth scrolling. See Gdi::init().
 		vs->pitch += 8;
 	}
@@ -1011,7 +1011,7 @@ void ScummEngine::initBGBuffers(int height) {
 	if (_game.version >= 7) {
 		// Resize main virtual screen in V7 games. This is necessary
 		// because in V7, rooms may be higher than one screen, so we have
-		// to accomodate for that.
+		// to accommodate for that.
 		initVirtScreen(kMainVirtScreen, _virtscr[kMainVirtScreen].topline, _screenWidth, height, true, true);
 	}
 
@@ -2249,6 +2249,27 @@ bool Gdi::drawStrip(byte *dstPtr, VirtScreen *vs, int x, int y, const int width,
 		byte result = decompressBitmap(dstPtr, vs->pitch, smap_ptr + offset, height);
 
 		_roomPalette[47] = 47;
+		return result;
+	}
+
+	// WORKAROUND: In the French VGA floppy version of MI1, the easter egg
+	// poking fun at Sierra has a dark blue background instead of white,
+	// which causes similar legibility issues (the other VGA floppy
+	// translations are fine, and the French VGA Amiga and CD releases
+	// fixed this).
+
+	else if (_vm->_game.id == GID_MONKEY_VGA &&
+			_vm->_language == Common::FR_FRA &&
+			_vm->_game.platform != Common::kPlatformAmiga &&
+			_vm->_currentRoom == 11 &&
+			vs->number == kMainVirtScreen &&
+			y == 24 && x >= 28 && x <= 52 && height == 56 &&
+			_vm->_enableEnhancements) {
+		_roomPalette[1] = 15;
+
+		byte result = decompressBitmap(dstPtr, vs->pitch, smap_ptr + offset, height);
+
+		_roomPalette[1] = 1;
 		return result;
 	}
 

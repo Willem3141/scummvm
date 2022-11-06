@@ -30,7 +30,7 @@
 static const PlainGameDescriptor mTropolisGames[] = {
 	{"obsidian", "Obsidian"},
 	{"mti", "Muppet Treasure Island"},
-	{"spqr", "S.P.Q.R: The Empire's Darkest Hour"},
+	{"spqr", "SPQR: The Empire's Darkest Hour"},
 	{nullptr, nullptr}
 };
 

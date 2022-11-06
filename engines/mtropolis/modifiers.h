@@ -140,7 +140,7 @@ public:
 
 #ifdef MTROPOLIS_DEBUG_ENABLE
 	const char *debugGetTypeName() const override { return "Color Table Modifier"; }
-	SupportStatus debugGetSupportStatus() const override { return kSupportStatusNone; }
+	SupportStatus debugGetSupportStatus() const override { return kSupportStatusDone; }
 #endif
 
 private:
@@ -240,8 +240,12 @@ public:
 
 	void disable(Runtime *runtime) override {}
 
+	void linkInternalReferences(ObjectLinkingScope *outerScope) override;
+	void visitInternalReferences(IStructuralReferenceVisitor *visitor) override;
+
 #ifdef MTROPOLIS_DEBUG_ENABLE
 	const char *debugGetTypeName() const override { return "Set Modifier"; }
+	SupportStatus debugGetSupportStatus() const override { return kSupportStatusDone; }
 #endif
 
 private:
@@ -480,6 +484,7 @@ public:
 
 #ifdef MTROPOLIS_DEBUG_ENABLE
 	const char *debugGetTypeName() const override { return "Scene Transition Modifier"; }
+	SupportStatus debugGetSupportStatus() const override { return kSupportStatusDone; }
 #endif
 
 private:
@@ -591,6 +596,7 @@ private:
 		EvaluateAndSendTaskData() : runtime(nullptr) {}
 
 		Common::SharedPtr<MiniscriptThread> thread;
+		Common::WeakPtr<RuntimeObject> triggerSource;
 		Runtime *runtime;
 		DynamicValue incomingData;
 	};
@@ -642,6 +648,7 @@ private:
 	DynamicValue _incomingData;
 
 	Common::SharedPtr<ScheduledEvent> _scheduledEvent;
+	Common::WeakPtr<RuntimeObject> _triggerSource;
 };
 
 class BoundaryDetectionMessengerModifier : public Modifier, public IBoundaryDetector {
@@ -692,6 +699,7 @@ private:
 	Runtime *_runtime;
 	bool _isActive;
 	DynamicValue _incomingData;
+	Common::WeakPtr<RuntimeObject> _triggerSource;
 };
 
 class CollisionDetectionMessengerModifier : public Modifier, public ICollider {
@@ -741,6 +749,7 @@ private:
 	bool _isActive;
 
 	DynamicValue _incomingData;
+	Common::WeakPtr<RuntimeObject> _triggerSource;
 };
 
 class KeyboardMessengerModifier : public Modifier {
